@@ -397,3 +397,91 @@ p {
   .table-requirement th{
     text-align: center;
   }
+
+/* tab Design */
+ .tab-container-tablink-design {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.tablink-design {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-right: 1px solid #e0e0e0;
+}
+
+.tablink-design button {
+    padding: 15px 25px;
+    text-align: left;
+    cursor: pointer;
+    background: none;
+    border: 1px solid #ccc; /* Thêm viền */
+    border-radius: 8px; /* Bo góc */
+    margin: 4px 10px; /* Thêm khoảng cách giữa các tab */
+    outline: none;
+    transition: all 0.3s ease;
+    color: #666;
+    font-size: 16px;
+    position: relative;
+}
+
+.tablink-design button:hover {
+    background-color: #eee1d1;
+    color: #463a18;
+}
+
+.tablink-design button.active {
+    background: linear-gradient(to right, #f7bd77, #ddd);
+    color: #000000;
+    font-weight: 500;
+}
+
+.tablink-design button.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #f7bd77;
+}
+
+.tab-content-tablink-design {
+    flex-grow: 1;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.tab-image-design {
+    display: none;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-image-design img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
